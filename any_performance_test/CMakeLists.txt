@@ -23,4 +23,4 @@ source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${any_performance_test_Sourc
 
 add_executable(any_performance_test ${any_performance_test_Sources})
 
-target_link_libraries(any_performance_test Qt5::Widgets Qt5::Gui Qt5::Core Qt5::Charts any)
+target_link_libraries(any_performance_test Qt5::Widgets Qt5::Gui Qt5::Core Qt5::Charts)

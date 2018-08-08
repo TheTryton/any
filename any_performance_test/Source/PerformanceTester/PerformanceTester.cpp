@@ -7,6 +7,8 @@
 #include <any>
 #include "../any/Include/any.h"
 
+#define NMS_UNUSED(x) ((void)x)
+
 using namespace std;
 using namespace chrono;
 
@@ -459,7 +461,7 @@ test_data testMOVE_BIG(const uint& testCount)
     return data;
 }
 
-std::array<uint, 8> g_test_steps = { 1,10,100,1000 };
+std::array<uint, 8> g_test_steps = { 10000, 100000 };
 using test_function = function<test_data(const uint&)>;
 std::map<string, pair<test_function, test_function>> g_tests = {
     { "Assign big-small", std::make_pair(testAssignBIG_SMALL<std::any>, testAssignBIG_SMALL<nms::any>) },
